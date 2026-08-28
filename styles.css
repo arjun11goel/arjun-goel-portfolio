@@ -2332,12 +2332,12 @@ transform: translateX(100%) translateY(0);
   /* Hero cards positioning */
 
   #hero-card-1 {
-    top: 8%;
+    top: 12%;
     left: 3%;
   }
 
   #hero-card-2 {
-    top: 8%;
+    top: 12%;
     right: 3%;
   }
 
@@ -2352,13 +2352,13 @@ transform: translateX(100%) translateY(0);
   }
 
   #hero-card-5 {
-    bottom: 17%;
+    bottom: 18%;
     left: 1%;
   }
 
   #hero-card-6 {
-    bottom: 17%;
-    right: 1%;
+    bottom: 18%;
+    right: 2%;
   }
 
   #hero-card-7 {
@@ -2367,7 +2367,7 @@ transform: translateX(100%) translateY(0);
   }
 
   #hero-card-8 {
-    bottom: 7%;
+    bottom: 9%;
     right: 8%;
   }
 
