@@ -2031,11 +2031,13 @@ transform: translateX(100%) translateY(0);
     gap: 12px;
     justify-content: center;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
   }
 
   .nav-links-left,
   .nav-links-right {
-    display: flex;
+    display: contents;
     gap: 12px;
     align-items: center;
   }
@@ -2301,11 +2303,13 @@ transform: translateX(100%) translateY(0);
     gap: 15px;
     justify-content: center;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
   }
 
   .nav-links-left,
   .nav-links-right {
-    display: flex;
+    display: contents;
     gap: 14px;
     align-items: center;
   }
@@ -2718,12 +2722,41 @@ transform: translateX(100%) translateY(0);
   
   nav.pill {
     padding: 8px 9px;
-    gap: 15px;
+    gap: 10px;
   }
 
   .nav-links-left,
   .nav-links-right {
+    display: contents;
     gap: 8px;
+  }
+
+  .nav-links-left a:nth-child(1) {
+    order: 1; /* About */
+  }
+
+  .nav-links-left a:nth-child(2) {
+    order: 2; /* Projects */
+  }
+
+  .nav-links-left a:nth-child(3) {
+    order: 3; /* Skills */
+  }
+
+  .nav-logo {
+    order: 4; /* AG */
+  }
+
+  .nav-links-left a:nth-child(4) {
+    order: 5; /* Education */
+  }
+
+  .nav-links-right a:nth-child(1) {
+    order: 6; /* Certificates */
+  }
+
+  .nav-links-right a:nth-child(2) {
+    order: 7; /* Contact */
   }
 
   nav.pill a {
