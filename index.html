@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arjun Goel — AI Engineer</title>
+  <meta name="description" content="Arjun Goel — AI Engineer. AI Engineer, Machine learning, generative AI, NLP and computer vision, NLP." />
+
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="loading">
+
+  <!-- ===================== LOADER ===================== -->
+
+  <div id="loader">
+    <div class="loader-text">
+      <div class="row"><span id="lw1">ARJUN GOEL</span></div>
+      <div class="row"><span id="lw2">PORTFOLIO</span></div>
+    </div>
+
+    <div class="loader-wand">🪄</div>
+
+    <div class="loader-bar">
+      <div class="loader-bar-fill" id="loaderFill"></div>
+    </div>
+  </div>
+
+  <!-- ===================== NAVIGATION ===================== -->
+
+  <header>
+    <nav class="pill" id="navPill">
+
+      <div class="nav-links-left">
+        <a href="#about">About</a>
+        <a href="#work">Projects</a>
+        <a href="#services">Skills</a>
+        <a href="#education">Education</a>
+      </div>
+
+      <div class="nav-logo">
+        <a href="#hero"><span>AG</span></a>
+      </div>
+
+      <div class="nav-links-right">
+        <a href="#certificates">Certificates</a>
+        <a href="#footer">Contact</a>
+      </div>
+
+      <a class="resume-btn" href="https://drive.google.com/drive/folders/16Y-4GD5oo4DbjvSi2fQrAPvDHmk9ebwf" target="_blank" rel="noopener">
+        Resume
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+      </a>
+
+      <div class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- ===================== MOBILE MENU ===================== -->
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-close" id="mobileClose" aria-label="Close menu">
+      ✖
+    </div>
+
+    <a href="#about">About</a>
+    <a href="#work">Projects</a>
+    <a href="#services">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#footer">Contact</a>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+
+  <section id="hero">
+
+    <div class="hero-cards" id="heroCards">
+
+      <div class="hero-card" id="hero-card-1">
+        <img src="assets/VITMEE-76.png" alt="VITMEE AIR 76">
+      </div>
+
+      <div class="hero-card" id="hero-card-2">
+        <img src="assets/HR-Policy.png" alt="HR Policy">
+      </div>
+
+      <div class="hero-card" id="hero-card-3">
+        <img src="assets/Memory Mind.png" alt="MemoryMind: Meeting Summarizer">
+      </div>
+
+      <div class="hero-card" id="hero-card-4">
+        <img src="assets/Microsoft-Azure-AI.png" alt="Microsoft Azure AI">
+      </div>
+
+      <div class="hero-card" id="hero-card-5">
+        <img src="assets/Oracle-Agentic-AI.png" alt="Oracle Agentic AI">
+      </div>
+
+      <div class="hero-card" id="hero-card-6">
+        <img src="assets/IBM SkillsBuild.png" alt="IBM SkillsBuild AI Literacy and Data Fundamentals Certificate">
+      </div>
+
+      <div class="hero-card" id="hero-card-7">
+        <img src="assets/Databricks-GenAI.png" alt="Databricks GenAI">
+      </div>
+
+      <div class="hero-card" id="hero-card-8">
+        <img src="assets/Customer Support Email Agent.png" alt="Customer Support Email Agent">
+      </div>
+
+    </div>
+
+    <div class="hero-content">
+
+      <div class="hero-greet display" id="heroGreet">
+        Hello, I'm
+      </div>
+
+      <h1 class="hero-name display" id="heroName">
+        <div class="row">
+          <span id="hn1">ARJUN</span>
+        </div>
+
+        <div class="row">
+          <span id="hn2">GOEL</span>
+        </div>
+      </h1>
+
+      <p class="hero-tagline" id="heroTag">
+        <!--MCA'27 @ VIT Vellore |
+        Microsoft Certified: Azure AI Fundamentals (AI-901) |
+        Oracle Agentic AI Certified Foundations Associate (2026) |
+        AI Engineering • Generative AI • Machine Learning • Data Analytics |
+        Python • SQL • LLMs • RAG • Vector Databases • FastAPI-->
+        AI Engineer focused on building intelligent, real-world systems with Generative AI, LLMs, RAG, AI agents, machine learning, and computer vision.
+
+      </p>
+
+      <div class="hero-cta" id="heroCta">
+
+        <a href="https://www.linkedin.com/in/arjun11goel/"
+            target="_blank"
+            rel="noopener noreferrer" class="btn-primary">
+          Let's Connect
+          <span class="btn-arrow">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </span>
+        </a>
+
+        <div class="available">
+          <span class="pulse"></span>
+          Available for work
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about">
+
+    <div class="inner">
+
+      <div class="eyebrow reveal-up">
+        Introductory Biography
+      </div>
+
+      <p class="bio-text" id="bioText"></p>
+
+    </div>
+
+  </section>
+
+  <!-- ===================== WORK ===================== -->
+
+  <section id="work">
+
+    <div class="inner">
+
+      <div class="eyebrow left reveal-up">
+        Selected Work
+      </div>
+
+      <h2
+        class="display reveal-up"
+        style="font-size:clamp(30px,5vw,60px);max-width:700px;"
+      >
+        Projects I've built
+      </h2>
+
+      <p class="sub reveal-up">
+        A collection of practical AI systems spanning GenAI, RAG, agents, ML, and multimodal AI.
+      </p>
+
+      <div class="stack-wrap">
+
+        <div class="work-card" style="top:110px;">
+
+          <div>
+            <div class="work-meta">
+              2026
+              <span class="dot"></span>
+              <span class="tag">Generative AI</span>
+            </div>
+
+            <div class="work-title display">
+              HR Policy RAG Assistant
+            </div>
+
+            <p class="work-desc">
+              Python • LangChain • Groq • Jina • FAISS • Streamlit • LangSmith<br><br>
+              An intelligent Retrieval-Augmented Generation (RAG) chatbot that answers employee questions using a company's HR policy document as its knowledge source.
+
+            <div class="work-links">
+              <!--<a href="#" class="solid" target="_blank">Live Demo
+                <span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </span>
+              </a>-->
+              <a href="https://github.com/arjun11goel/hr-policy-rag-assistant" target="_blank" class="outline">GitHub
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="work-visual">
+            <img src="assets/Project Preview/HR Policy Assistant RAG Preview.png" alt="Preview">
+          </div>
+
+        </div>
+
+        <div class="work-card" style="top:130px;">
+
+          <div>
+            <div class="work-meta">
+              2026
+              <span class="dot"></span>
+              <span class="tag">NLP</span>
+            </div>
+
+            <div class="work-title display">
+              Meeting Summarizer and Action Tracker
+            </div>
+
+            <p class="work-desc">
+              Python • LLM Google Gemini • Pydantic • Streamlit •  SQLite • Pytest <br><br>
+              AI-powered application that transforms meeting audio or transcripts into structured summaries, 
+              decisions, action items, owners, deadlines, priorities, risks, dependencies, and follow-up questions.
+            </p>
+
+            <div class="work-links">
+              <!--<a href="#" class="solid">Live Demo 
+                <span class="btn-arrow">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </span>
+              </a>-->
+              <a href="https://github.com/arjun11goel/meeting-intelligence-and-action-tracker" target="_blank" class="outline">GitHub
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="work-visual">
+            <img src="assets/Project Preview/MemoryMind Preview.png" alt="Preview">
+          </div>
+
+        </div>
+
+        <div class="work-card" style="top:150px;">
+
+          <div>
+            <div class="work-meta">
+              2026
+              <span class="dot"></span>
+              <span class="tag">AI Agent</span>
+            </div>
+
+            <div class="work-title display">
+              Customer Support Email Agent
+            </div>
+
+            <p class="work-desc">
+              Python • FastAPI • Pydantic • SQLite • LangGraph • LangChain • LangChain • FAISS • Streamlit • Pytest<br><br>
+              AI engineering project that processes customer support emails through an agentic workflow.
+              The system is designed to classify customer intent, retrieve relevant knowledge, generate grounded responses, validate the response and route cases for human review.
+            </p>
+
+            <div class="work-links">
+              <!--<a href="#" class="solid">Live Demo 
+                <span class="btn-arrow">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </span>
+              </a>-->
+              <a href="https://github.com/arjun11goel/customer-support-email-agent" target="_blank" class="outline">GitHub
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="work-visual">
+            <img src="assets/Project Preview/Customer Support Email Agent.png" alt="Preview">
+          </div>
+
+        </div>
+
+        <div class="work-card" style="top:170px;">
+
+          <div>
+            <div class="work-meta">
+              2026
+              <span class="dot"></span>
+              <span class="tag">Computer Vision</span>
+            </div>
+
+            <div class="work-title display">
+              VisionGuide AI
+            </div>
+
+            <p class="work-desc">
+              Python • PyTorch • YOLO • PaddleOCR • Depth Anything V2 Small • OpenCV • Streamlit • FastAPI • Pydantic • Web Speech API<br><br>
+              An image-based assistive AI system that analyzes surroundings using computer vision, 
+              structured scene understanding, and vision-language reasoning to identify relevant objects and hazards and generate concise, 
+              accessibility-oriented guidance through text and speech.
+            <div class="work-links">
+              <div class="available">
+                <span class="pulse"></span>
+                  In Progress
+                </div>
+              <!--<a href="#" class="solid" target="_blank">Live Demo
+                <span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </span>
+              </a>
+              <a href="https://github.com/arjun11goel/hr-policy-rag-assistant" target="_blank" class="outline">GitHub
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                </svg>
+              </a>-->
+            </div>
+          </div>
+
+          <div class="work-visual">
+            <img src="assets/Project Preview/Vision Guide AI.jpeg" alt="Preview">
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+
+  <section id="services">
+
+    <div class="inner">
+
+      <div class="eyebrow left reveal-up">
+        Where I Can Help
+      </div>
+
+      <h2 class="display reveal-up" style="font-size:clamp(30px,5vw,60px);max-width:700px;">
+        From Intelligence To <br>
+        Deployed Systems
+      </h2>
+
+      <p class="sub reveal-up">
+        ...and everything in between, turning models, retrieval, agents, and data into production-ready AI systems.
+      </p>
+
+      <div class="svc-stack">
+
+        <div class="svc-card">
+          <div>
+            <h3>Programming Languages</h3>
+            <p>
+              Python · SQL · Java
+            </p>
+          </div>
+
+          <div class="svc-logo">
+            <img src="assets\service logo\python.png" alt="Logo">
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div>
+            <h3>GenAI & LLMs</h3>
+            <p>
+              Retrieval-Augmented Generation (RAG) · AI Agents · Prompt Engineering · AI Evaluation · MCP · Claude AI · OpenAI
+            </p>
+          </div>
+
+          <div class="svc-logo">
+            <img src="assets\service logo\ai-assistant.png" alt="Logo">
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div>
+            <h3>Machine Learning</h3>
+            <p>
+              Scikit-learn · Predictive Modeling · Classification · Clustering · Feature Engineering · Model Evaluation
+            </p>
+          </div>
+
+          <div class="svc-logo">
+            <img src="assets\service logo\coding.png" alt="Logo">
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div>
+            <h3>Frameworks & APIs</h3>
+            <p>
+              LangChain · FastAPI · REST APIs · Hugging Face Transformers · PyTorch · Pydantic · OpenAI Responses API
+            </p>
+          </div>
+
+          <div class="svc-logo">
+            <img src="assets\service logo\api.png" alt="Logo">
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div>
+            <h3>Core CS</h3>
+            <p>
+              Data Structures & Algorithms · OOPs · DBMS · OS
+            </p>
+          </div>
+
+          <div class="svc-logo">
+            <img src="assets\service logo\data.png" alt="Logo">
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div>
+            <h3>Infrastructure & Tools</h3>
+            <p>
+              Vector Databases · MySQL · Git · GitHub · Microsoft Azure · Microsoft AI Foundry · Streamlit
+            </p>
+          </div>
+
+          <div class="svc-logo">
+            <img src="assets\service logo\browser.png" alt="Logo">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+<!-- ===================== EDUCATION ===================== -->
+
+<section id="education">
+
+  <div class="inner">
+
+    <div class="eyebrow reveal-up">
+        Curricular
+    </div>
+
+    <h2 class="edu-heading display reveal-up">
+      Education <br>
+      <span class="dim">& Highlights</span>
+    </h2>
+
+    <div class="edu-grid">
+
+      <!-- ================= ACADEMIC JOURNEY ================= -->
+
+      <div class="edu-column">
+
+        <div class="col-label reveal-up">
+          Academic Journey
+        </div>
+
+        <div class="edu-timeline">
+
+          <div class="timeline-item reveal-up">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+              <div class="yr">
+                2025 – 2027
+              </div>
+
+              <h4>
+                Vellore Institute of Technology, Vellore
+              </h4>
+
+              <p>
+                Master of Computer Applications (MCA)
+              </p>
+
+              <span class="edu-status">
+                Currently pursuing
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="timeline-item reveal-up">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+              <div class="yr">
+                2021 – 2024
+              </div>
+
+              <h4>
+                Meerut Institute of Technology, Meerut
+              </h4>
+
+              <p>
+                Bachelor of Computer Applications (BCA)
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ================= MILESTONE ================= -->
+
+      <div class="edu-column">
+
+        <div class="col-label reveal-up">
+          Academic Highlight
+        </div>
+
+        <div class="milestone-card reveal-up">
+
+          <div class="milestone-header">
+
+            <span>
+              VITMEE · 2025
+            </span>
+
+            <span class="btn-arrow">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </span>
+
+          </div>
+
+          <div class="milestone-rank">
+            All India Rank <strong>76</strong>
+          </div>
+
+          <div class="milestone-line"></div>
+
+          <h4>
+            VIT Masters Entrance Examination
+          </h4>
+
+          <p>
+            Secured All India Rank 76 in VITMEE and earned admission to the Master of Computer Applications program at Vellore Institute of Technology.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- =========================================================
+       CERTIFICATES
+       ========================================================= -->
+
+  <section id="certificates">
+
+    <div class="inner">
+
+      <div class="eyebrow reveal-up">
+        Credentials
+      </div>
+
+      <h2 class="cert-title display reveal-up">
+        Certified &<br>
+        Verified
+      </h2>
+
+      <p class="cert-sub reveal-up">
+        Courses, workshops, and credentials that shaped my AI engineering foundation.
+      </p>
+
+    </div>
+
+    <div class="cert-scroll-area" id="certScrollArea">
+
+      <div class="cert-sticky">
+
+        <div class="cert-gallery" id="certGallery">
+
+          <div class="cert-card">
+
+            <div class="cert-card-img"><img src="assets/certificates/Microsoft Azure AI Fundamentals.png" alt="Microsoft Azure AI Fundamentals">
+            </div>
+
+            <h4>
+              <span>Azure AI Fundamentals (AI-901) </span>
+
+              <a
+                  href="https://learn.microsoft.com/en-us/users/arjun11goel/credentials/bffe9cec4eb78c7e"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="cert-verify-icon"
+                  aria-label="Verify Microsoft Azure AI Fundamentals certificate"
+                >
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                </a>
+            </h4>
+
+            <div class="issuer">
+              Microsoft
+            </div>
+
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-card-img"><img src="assets/certificates/Oracle Agentic AI Foundational Associate Certificate.png" alt="Oracle Agentic AI Foundational Associate Certificate">
+            </div>
+
+            <h4>
+              <span>Oracle Agentic AI Certified Foundations Associate </span>
+
+              <a
+                  href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=364FF0F344545901C6E832A165289AB10B591783EB4D5F25BC367E82557D8338"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="cert-verify-icon"
+                  aria-label="Verify Databricks Accredited Genrative AI Fundamentals"
+                >
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                </a>
+            </h4>
+
+            <div class="issuer">
+              Oracle
+            </div>
+
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-card-img"><img src="assets/certificates/Databricks GenAI Fundamentals.png" alt="Databricks Accredited GenAI Fundamentals">
+            </div>
+
+            <h4>
+              <span>Academy Accreditation - Generative AI Fundamentals </span>
+
+              <a
+                  href="https://credentials.databricks.com/81eacae4-065d-4049-853c-f1dd56eb0fa6#acc.ZH4SwvVM"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="cert-verify-icon"
+                  aria-label="Verify Data Fundamentals"
+                >
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                </a>
+            </h4>
+
+            <div class="issuer">
+              Databricks
+            </div>
+
+          </div>
+
+          <div class="cert-card">
+
+            <div class="cert-card-img"><img src="assets/certificates/ai-literacy.png" alt="IBM AI Literacy">
+            </div>
+
+            <h4>
+              <span>AI Literacy</span>
+
+              <a
+                  href="https://www.credly.com/badges/fa10e952-a127-4afa-b160-144afd064401/public_url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="cert-verify-icon"
+                  aria-label="Verify AI Literacy"
+                >
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                </a>
+            </h4>
+
+            <div class="issuer">
+              IBM
+            </div>
+
+          </div>
+
+          <div class="cert-card">
+
+            <div class="cert-card-img"><img src="assets/certificates/data-fundamentals.png" alt="IBM Data Fundamentals">
+            </div>
+
+            <h4>
+              <span>Data Fundamentals </span>
+
+                <a
+                  href="https://www.credly.com/badges/5f144f70-390e-454a-86b6-3cf15c3d45fc/public_url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="cert-verify-icon"
+                  aria-label="Verify Microsoft AI Skills Fest 2026 Certificate"
+                  
+                >
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                </a>
+            </h4>
+
+            <div class="issuer">
+              IBM
+            </div>
+
+          </div>
+
+          <div class="cert-card">
+
+            <div class="cert-card-img"><img src="assets/certificates/ai-skills-fest-2026.png" alt="AI Skills Fest 2026">
+            </div>
+
+            <h4>
+              <span>AI Skills Fest 2026 </span>
+
+                <a
+                  href="https://www.credly.com/badges/c58a979a-a32d-4db9-aa9f-ba5b1c1c6b82/public_url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="cert-verify-icon"
+                  aria-label="Verify certificate"
+                >
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                </a>
+            </h4>
+
+            <div class="issuer">
+              Microsoft
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="cert-progress">
+          <div
+            class="cert-progress-bar"
+            id="certProgressBar"
+          ></div>
+        </div>
+
+        <div class="cert-scroll-hint" id="certScrollHint">
+          Scroll to explore
+          <span>→</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+
+  <section id="footer">
+
+    <div class="inner">
+
+      <div class="footer-eyebrow reveal-up">
+        That's a wrap? Maybe not.
+      </div>
+
+      <h2 class="footer-heading display reveal-up">
+        Let's Meet & <br>
+        Build What's Next.
+        <!--Great Things Start<br>
+        With 'Meet'!-->
+      </h2>
+
+      <p class="footer-sub reveal-up">
+        Always open to meaningful conversations, interesting problems, and opportunities to build with AI.
+        <!--Open to conversations, collaborations, ideas — or just a friendly chat about AI.-->
+      </p>
+      <p class="footer-sub2 reveal-up">
+        📞 +91 7830917077
+      </p>
+
+      <div class="contact-cta reveal-up">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=arjun11goel@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer" class="btn-dark" aria-label="Let's Meet">
+          Let's Meet
+          <span class="btn-arrow">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <div class="connect-label reveal-up">
+        or connect through..
+      </div>
+
+      <div class="connect-icons reveal-up">
+
+        <a href="https://www.linkedin.com/in/arjun11goel/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="linkedin-tagline"
+            aria-label="Linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+              <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
+            </svg>
+        </a>
+
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=arjun11goel@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer" class = "gmail-tagline" aria-label="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+            <path d="M 14 4 C 8.4886661 4 4 8.4886661 4 14 L 4 36 C 4 41.511334 8.4886661 46 14 46 L 36 46 C 41.511334 46 46 41.511334 46 36 L 46 14 C 46 8.4886661 41.511334 4 36 4 L 14 4 z M 13 16 L 37 16 C 37.18 16 37.349766 16.020312 37.509766 16.070312 L 27.679688 25.890625 C 26.199688 27.370625 23.790547 27.370625 22.310547 25.890625 L 12.490234 16.070312 C 12.650234 16.020312 12.82 16 13 16 z M 11.070312 17.490234 L 18.589844 25 L 11.070312 32.509766 C 11.020312 32.349766 11 32.18 11 32 L 11 18 C 11 17.82 11.020312 17.650234 11.070312 17.490234 z M 38.929688 17.490234 C 38.979688 17.650234 39 17.82 39 18 L 39 32 C 39 32.18 38.979687 32.349766 38.929688 32.509766 L 31.400391 25 L 38.929688 17.490234 z M 20 26.410156 L 20.890625 27.310547 C 22.020625 28.440547 23.510234 29 24.990234 29 C 26.480234 29 27.959844 28.440547 29.089844 27.310547 L 29.990234 26.410156 L 37.509766 33.929688 C 37.349766 33.979688 37.18 34 37 34 L 13 34 C 12.82 34 12.650234 33.979687 12.490234 33.929688 L 20 26.410156 z"></path>
+          </svg>
+        </a>
+
+        <a href="https://github.com/arjun11goel"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="github-tagline"
+            aria-label="Github">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+            <path d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,24,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z"></path>
+          </svg>
+        </a>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <div>
+          © Copyright & stuff...
+        </div>
+
+        <a href="#hero">
+          Back to top ↑
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+
+  <script src="script.js"></script>
+
+</body>
+</html>
