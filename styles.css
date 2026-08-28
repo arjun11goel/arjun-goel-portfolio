@@ -1754,7 +1754,7 @@ transform: translateX(100%) translateY(0);
 
 @media (max-width: 1100px) {
 
-  nav.pill {
+  .nav.pill {
     gap: 24px;
   }
 
@@ -2020,29 +2020,51 @@ transform: translateX(100%) translateY(0);
 @media (max-width: 720px) {
 
   header {
-    top: 14px;
+    top: 12px;
+    padding: 0 10px;
   }
 
   nav.pill {
-    gap: 0;
-    padding: 8px 10px;
-    width: min(100%, 520px);
-    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    padding: 7px 10px;
+    gap: 10px;
+    justify-content: center;
+    box-sizing: border-box;
   }
 
   .nav-links-left,
   .nav-links-right {
-    display: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
   }
 
+  nav.pill a {
+    font-size: 11px;
+  }
+
+  nav.pill .nav-logo a {
+    width: 32px;
+    height: 32px;
+    font-size: 17px;
+  }
+
+  /* Hide Resume */
   .resume-btn {
     display: none;
   }
 
+  /* Hide hamburger */
   .nav-toggle {
-    display: flex;
+    display: none;
   }
 
+  /* Hide the separate mobile menu */
+  .mobile-menu {
+    display: none;
+  }
+  
   .work-card {
     position: sticky !important;
     z-index: 10 !important;
@@ -2079,12 +2101,12 @@ transform: translateX(100%) translateY(0);
   }
 
   #hero-card-1 {
-    top: 8%;
+    top: 10%;
     left: 3%;
   }
 
   #hero-card-2 {
-    top: 8%;
+    top: 10%;
     right: 3%;
   }
 
@@ -2197,12 +2219,7 @@ transform: translateX(100%) translateY(0);
     height: 96px;
   }
 
-  #hero-card-3,
-  #hero-card-7,
-  #hero-card-8 {
-    width: 64px;
-    height: 84px;
-  }
+  
 
   .cert-card-img {
     height: 200px;
@@ -2273,29 +2290,48 @@ transform: translateX(100%) translateY(0);
 
   header {
     top: 12px;
-    left: 0;
-    right: 0;
-    width: 100%;
-    padding: 0 12px;
+    padding: 0 10px;
   }
 
   nav.pill {
     width: 100%;
     max-width: 100%;
-    padding: 8px 10px;
-    gap: 0;
-    justify-content: space-between;
+    padding: 9px 14px;
+    gap: 12px;
+    justify-content: center;
     box-sizing: border-box;
   }
 
   .nav-links-left,
-  .nav-links-right,
+  .nav-links-right {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  nav.pill a {
+    font-size: 11px;
+  }
+
+  nav.pill .nav-logo a {
+    width: 32px;
+    height: 32px;
+    font-size: 17px;
+  }
+
+  /* Hide Resume */
   .resume-btn {
     display: none;
   }
 
+  /* Hide hamburger */
   .nav-toggle {
-    display: flex;
+    display: none;
+  }
+
+  /* Hide the separate mobile menu */
+  .mobile-menu {
+    display: none;
   }
 
   /* ===================== HERO ===================== */
@@ -2332,12 +2368,12 @@ transform: translateX(100%) translateY(0);
   /* Hero cards positioning */
 
   #hero-card-1 {
-    top: 12%;
+    top: 15%;
     left: 3%;
   }
 
   #hero-card-2 {
-    top: 12%;
+    top: 15%;
     right: 3%;
   }
 
@@ -2352,13 +2388,13 @@ transform: translateX(100%) translateY(0);
   }
 
   #hero-card-5 {
-    bottom: 18%;
-    left: 1%;
+    bottom: 22%;
+    left: 2%;
   }
 
   #hero-card-6 {
-    bottom: 18%;
-    right: 2%;
+    bottom: 22%;
+    right: 3%;
   }
 
   #hero-card-7 {
@@ -2646,6 +2682,10 @@ transform: translateX(100%) translateY(0);
     gap: 8px;
   }
 
+  .footer-bottom a{
+    display: none;
+  }
+
   /* ===================== MOBILE MENU ===================== */
 
   .mobile-menu {
@@ -2673,6 +2713,28 @@ transform: translateX(100%) translateY(0);
 
 @media (max-width: 420px) {
 
+  /*--------------nav ---------*/
+
+  nav.pill {
+    padding: 6px 7px;
+    gap: 6px;
+  }
+
+  .nav-links-left,
+  .nav-links-right {
+    gap: 6px;
+  }
+
+  nav.pill a {
+    font-size: 10px;
+  }
+
+  nav.pill .nav-logo a {
+    width: 29px;
+    height: 29px;
+    font-size: 15px;
+  }
+
   /* ---------- Hero ---------- */
 
   #hero {
@@ -2685,16 +2747,9 @@ transform: translateX(100%) translateY(0);
     height: 96px;
   }
 
-  #hero-card-3,
-  #hero-card-7,
-  #hero-card-8 {
-    width: 64px;
-    height: 84px;
-  }
-
   #hero-card-1,
   #hero-card-2 {
-    top: 9%;
+    top: 10%;
   }
 
   #hero-card-3,
@@ -2704,7 +2759,7 @@ transform: translateX(100%) translateY(0);
 
   #hero-card-5,
   #hero-card-6 {
-    bottom: 18%;
+    bottom: 22%;
   }
 
   #hero-card-7,
@@ -2780,6 +2835,10 @@ transform: translateX(100%) translateY(0);
   .svc-logo{
     display:none;
   }
+
+  .footer-bottom a{
+    display: none;
+  }
 }
 
 
@@ -2826,6 +2885,10 @@ transform: translateX(100%) translateY(0);
   }
   .svc-logo{
     display:none;
+  }
+
+  .footer-bottom a{
+    display: none;
   }
 }
 
