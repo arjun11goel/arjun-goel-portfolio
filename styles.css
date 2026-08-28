@@ -2114,7 +2114,7 @@ transform: translateX(100%) translateY(0);
 
   #hero-card-3 {
     top: 25%;
-    left: 1%;
+    left: 2%;
   }
 
   #hero-card-4 {
@@ -2291,16 +2291,16 @@ transform: translateX(100%) translateY(0);
   /* ===================== HEADER / NAV ===================== */
 
   header {
-    position:absolute;
+    position:fixed;
     top: 12px;
-    padding: 0 10px;
+    padding: 10 10px;
   }
 
   nav.pill {
     width: 100%;
     max-width: 100%;
     padding: 10px 15px;
-    gap: 15px;
+    gap: 25px;
     justify-content: center;
     box-sizing: border-box;
     display: flex;
@@ -2383,12 +2383,12 @@ transform: translateX(100%) translateY(0);
   }
 
   #hero-card-3 {
-    top: 25%;
-    left: 1%;
+    top: 35%;
+    left: 2%;
   }
 
   #hero-card-4 {
-    top: 25%;
+    top: 35%;
     right: 1%;
   }
 
@@ -2771,6 +2771,15 @@ transform: translateX(100%) translateY(0);
 
   /* ---------- Hero ---------- */
 
+  .hero-greet {
+    font-size: clamp(24px, 7vw, 42px);
+    margin-bottom: -2px;
+  }
+
+  .hero-name {
+    font-size: clamp(42px, 15vw, 90px);
+  }
+
   #hero {
     padding-left: 14px;
     padding-right: 14px;
@@ -2893,12 +2902,7 @@ transform: translateX(100%) translateY(0);
     height: 88px;
   }
 
-  #hero-card-3,
-  #hero-card-7,
-  #hero-card-8 {
-    width: 58px;
-    height: 76px;
-  }
+  
 
   .cert-gallery {
     padding-left: 18px;
