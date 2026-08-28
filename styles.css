@@ -2027,8 +2027,8 @@ transform: translateX(100%) translateY(0);
   nav.pill {
     width: 100%;
     max-width: 100%;
-    padding: 7px 10px;
-    gap: 10px;
+    padding: 9px 14px;
+    gap: 12px;
     justify-content: center;
     box-sizing: border-box;
   }
@@ -2036,7 +2036,7 @@ transform: translateX(100%) translateY(0);
   .nav-links-left,
   .nav-links-right {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     align-items: center;
   }
 
@@ -2289,6 +2289,7 @@ transform: translateX(100%) translateY(0);
   /* ===================== HEADER / NAV ===================== */
 
   header {
+    position:static;
     top: 12px;
     padding: 0 10px;
   }
@@ -2296,8 +2297,8 @@ transform: translateX(100%) translateY(0);
   nav.pill {
     width: 100%;
     max-width: 100%;
-    padding: 9px 14px;
-    gap: 12px;
+    padding: 10px 15px;
+    gap: 15px;
     justify-content: center;
     box-sizing: border-box;
   }
@@ -2305,7 +2306,7 @@ transform: translateX(100%) translateY(0);
   .nav-links-left,
   .nav-links-right {
     display: flex;
-    gap: 12px;
+    gap: 14px;
     align-items: center;
   }
 
@@ -2714,15 +2715,15 @@ transform: translateX(100%) translateY(0);
 @media (max-width: 420px) {
 
   /*--------------nav ---------*/
-
+  
   nav.pill {
-    padding: 6px 7px;
-    gap: 6px;
+    padding: 8px 9px;
+    gap: 15px;
   }
 
   .nav-links-left,
   .nav-links-right {
-    gap: 6px;
+    gap: 8px;
   }
 
   nav.pill a {
