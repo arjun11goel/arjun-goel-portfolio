@@ -2289,7 +2289,7 @@ transform: translateX(100%) translateY(0);
   /* ===================== HEADER / NAV ===================== */
 
   header {
-    position:static;
+    position:absolute;
     top: 12px;
     padding: 0 10px;
   }
