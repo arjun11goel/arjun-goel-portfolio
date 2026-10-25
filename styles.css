@@ -3012,7 +3012,7 @@ transform: translateX(100%) translateY(0);
 }
 
 /* Slightly trim space below the footer row. */
-#footer { padding-bottom: 65px; }
+#footer { padding-bottom: 60px; }
 @media (max-width: 720px) {
   #footer { padding-bottom: 72px; }
 }
