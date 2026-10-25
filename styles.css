@@ -2822,13 +2822,8 @@ transform: translateX(100%) translateY(0);
   }
 }
 
-/* Tighten the final section so the contact heading remains in view at page end. */
-#footer { padding:80px 6vw 50px; }
-#footer .footer-bottom { margin-top:50px; }
-@media (max-width:720px) {
-  #footer { padding:76px 6vw 40px; }
-  #footer .footer-bottom { margin-top:40px; }
-}
+
+
 
 
 /* ===================== RESPONSIVE NAVIGATION ===================== */
