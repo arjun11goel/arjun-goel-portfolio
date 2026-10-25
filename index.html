@@ -23,6 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="experience.css">
 </head>
 
 <body class="loading">
@@ -64,8 +65,8 @@
       <div class="nav-links-left">
         <a href="#about">About</a>
         <a href="#work">Projects</a>
+        <a href="#experience">Experience</a>
         <a href="#services">Skills</a>
-        <a href="#education">Education</a>
       </div>
 
       <div class="nav-logo">
@@ -73,11 +74,10 @@
       </div>
 
       <div class="nav-links-right">
+        <a href="#education">Education</a>
         <a href="#certificates">Certificates</a>
         <a href="#footer">Contact</a>
-      </div>
-
-      <a class="resume-btn" href="https://drive.google.com/drive/folders/16Y-4GD5oo4DbjvSi2fQrAPvDHmk9ebwf" target="_blank" rel="noopener">
+      <a class="resume-btn" href="https://drive.google.com/drive/folders/16Y-4GD5oo4DbjvSi2fQrAPvDHmk9ebwf" target="_blank" rel="noopener noreferrer">
         Resume
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -85,25 +85,27 @@
           <line x1="10" y1="14" x2="21" y2="3"></line>
         </svg>
       </a>
-
-      <div class="nav-toggle" id="navToggle" aria-label="Open menu">
-        <span></span>
-        <span></span>
-        <span></span>
       </div>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
     </nav>
   </header>
 
   <!-- ===================== MOBILE MENU ===================== -->
 
-  <div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-close" id="mobileClose" aria-label="Close menu">
-      ✖
-    </div>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <button class="mobile-close" id="mobileClose" type="button" aria-label="Close menu">
+      ×
+    </button>
 
     <a href="#about">About</a>
     <a href="#work">Projects</a>
+    <a href="#experience">Experience</a>
     <a href="#services">Skills</a>
     <a href="#education">Education</a>
     <a href="#certificates">Certificates</a>
@@ -125,7 +127,7 @@
       </div>
 
       <div class="hero-card" id="hero-card-3">
-        <img src="assets/Memory Mind.png" alt="MemoryMind: Meeting Summarizer">
+        <img src="assets/Scrape Research AI Pipeline.png" alt="ScrapeResearch.ai: Multi Agent Research Pipeline">
       </div>
 
       <div class="hero-card" id="hero-card-4">
@@ -137,7 +139,7 @@
       </div>
 
       <div class="hero-card" id="hero-card-6">
-        <img src="assets/IBM SkillsBuild.png" alt="IBM SkillsBuild AI Literacy and Data Fundamentals Certificate">
+        <img src="assets/Customer Support Email Agent.png" alt="Customer Support Email Agent">
       </div>
 
       <div class="hero-card" id="hero-card-7">
@@ -145,7 +147,7 @@
       </div>
 
       <div class="hero-card" id="hero-card-8">
-        <img src="assets/Customer Support Email Agent.png" alt="Customer Support Email Agent">
+        <img src="assets/IBM SkillsBuild.png" alt="IBM SkillsBuild AI Literacy and Data Fundamentals Certificate">
       </div>
 
     </div>
@@ -253,11 +255,12 @@
             </div>
 
             <p class="work-desc">
-              Python • LangChain • Groq • Jina • FAISS • Streamlit • LangSmith<br><br>
-              An intelligent Retrieval-Augmented Generation (RAG) chatbot that answers employee questions using a company's HR policy document as its knowledge source.
-
+              Python • LangChain • Groq • Portkey • Jina • Qdrant Cloud • Streamlit • LangSmith • Docker<br><br>
+              An intelligent Retrieval-Augmented Generation (RAG) chatbot that answers employee questions using company HR policy documents, 
+              delivering grounded, reliable responses with safety guardrails, request routing, observability, and automated evaluation.
+            </p>
             <div class="work-links">
-              <!--<a href="#" class="solid" target="_blank">Live Demo
+              <a href="https://hr-policy-rag-assistant-6zao.onrender.com" class="solid" target="_blank" rel="noopener noreferrer">Live Demo
                 <span>
                   <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -265,8 +268,8 @@
                     <line x1="10" y1="14" x2="21" y2="3"></line>
                   </svg>
                 </span>
-              </a>-->
-              <a href="https://github.com/arjun11goel/hr-policy-rag-assistant" target="_blank" class="outline">GitHub
+              </a>
+              <a href="https://github.com/arjun11goel/hr-policy-rag-assistant" target="_blank" class="outline" rel="noopener noreferrer">GitHub
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
                   <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
                 </svg>
@@ -280,7 +283,93 @@
 
         </div>
 
-        <div class="work-card" style="top:130px;">
+        <div class="work-card" style="top:150px;">
+
+          <div>
+            <div class="work-meta">
+              2026
+              <span class="dot"></span>
+              <span class="tag">AI Agent</span>
+            </div>
+
+            <div class="work-title display">
+              Multi Agent Research Pipeline
+            </div>
+
+            <p class="work-desc">
+              Python • LangChain • Streamlit • Mistral AI • Tavily Search<br><br>
+              ScrapeResearch.ai turns research topics into structured reports through a four-stage pipeline: web search, webpage extraction, report generation, and AI-powered critique. 
+              It combines live sources, detailed findings, critic scores, and feedback in an interactive Streamlit interface.
+            </p>
+
+            <div class="work-links">
+              <a href="https://scraperesearch-ai.streamlit.app/" class="solid" target="_blank" rel="noopener noreferrer">Live Demo 
+                <span class="btn-arrow">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </span>
+              </a>
+              <a href="https://github.com/arjun11goel/multi-agent-research-pipeline" target="_blank" class="outline" rel="noopener noreferrer">GitHub
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="work-visual">
+            <img src="assets/Project Preview/multi agent research pipeline.png" alt="Preview">
+          </div>
+
+        </div>
+
+        <div class="work-card" style="top:150px;">
+
+          <div>
+            <div class="work-meta">
+              2026
+              <span class="dot"></span>
+              <span class="tag">AI Agent</span>
+            </div>
+
+            <div class="work-title display">
+              Customer Support Email Agent
+            </div>
+
+            <p class="work-desc">
+              Python • FastAPI • LangGraph • LangChain • FAISS • Gemini • Streamlit • SQLite<br><br>
+              SupportFlow AI streamlines customer support by classifying email intent, retrieving relevant guidance, 
+              drafting and validating replies, and routing sensitive or uncertain cases for human review. Eligible responses can be recorded as simulated sends.
+            </p>
+
+            <div class="work-links">
+              <a href="https://customer-support-email-agent.streamlit.app/" class="solid" target="_blank" rel="noopener noreferrer">Live Demo 
+                <span class="btn-arrow">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </span>
+              </a>
+              <a href="https://github.com/arjun11goel/customer-support-email-agent" target="_blank" class="outline" rel="noopener noreferrer">GitHub
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="work-visual">
+            <img src="assets/Project Preview/Customer Support Email Agent.png" alt="Preview">
+          </div>
+
+        </div>
+
+                <div class="work-card" style="top:130px;">
 
           <div>
             <div class="work-meta">
@@ -300,7 +389,7 @@
             </p>
 
             <div class="work-links">
-              <!--<a href="#" class="solid">Live Demo 
+              <a href="https://meeting-mind.streamlit.app" class="solid" target="_blank" rel="noopener noreferrer">Live Demo 
                 <span class="btn-arrow">
                   <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -308,8 +397,8 @@
                     <line x1="10" y1="14" x2="21" y2="3"></line>
                   </svg>
                 </span>
-              </a>-->
-              <a href="https://github.com/arjun11goel/meeting-intelligence-and-action-tracker" target="_blank" class="outline">GitHub
+              </a>
+              <a href="https://github.com/arjun11goel/meeting-intelligence-and-action-tracker" target="_blank" class="outline" rel="noopener noreferrer">GitHub
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
                   <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
                 </svg>
@@ -319,49 +408,6 @@
 
           <div class="work-visual">
             <img src="assets/Project Preview/MemoryMind Preview.png" alt="Preview">
-          </div>
-
-        </div>
-
-        <div class="work-card" style="top:150px;">
-
-          <div>
-            <div class="work-meta">
-              2026
-              <span class="dot"></span>
-              <span class="tag">AI Agent</span>
-            </div>
-
-            <div class="work-title display">
-              Customer Support Email Agent
-            </div>
-
-            <p class="work-desc">
-              Python • FastAPI • Pydantic • SQLite • LangGraph • LangChain • LangChain • FAISS • Streamlit • Pytest<br><br>
-              AI engineering project that processes customer support emails through an agentic workflow.
-              The system is designed to classify customer intent, retrieve relevant knowledge, generate grounded responses, validate the response and route cases for human review.
-            </p>
-
-            <div class="work-links">
-              <!--<a href="#" class="solid">Live Demo 
-                <span class="btn-arrow">
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                  </svg>
-                </span>
-              </a>-->
-              <a href="https://github.com/arjun11goel/customer-support-email-agent" target="_blank" class="outline">GitHub
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <div class="work-visual">
-            <img src="assets/Project Preview/Customer Support Email Agent.png" alt="Preview">
           </div>
 
         </div>
@@ -384,25 +430,12 @@
               An image-based assistive AI system that analyzes surroundings using computer vision, 
               structured scene understanding, and vision-language reasoning to identify relevant objects and hazards and generate concise, 
               accessibility-oriented guidance through text and speech.
+            </p>
             <div class="work-links">
               <div class="available">
                 <span class="pulse"></span>
                   In Progress
                 </div>
-              <!--<a href="#" class="solid" target="_blank">Live Demo
-                <span>
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                  </svg>
-                </span>
-              </a>
-              <a href="https://github.com/arjun11goel/hr-policy-rag-assistant" target="_blank" class="outline">GitHub
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                </svg>
-              </a>-->
             </div>
           </div>
 
@@ -416,6 +449,82 @@
 
     </div>
 
+  </section>
+
+  <!-- ===================== EXPERIENCE DESK ===================== -->
+  <section id="experience" aria-labelledby="experience-title">
+    <div class="inner experience-inner">
+      <div class="experience-intro">
+        <div class="eyebrow left">Career / Field Notes</div>
+        <h2 class="display" id="experience-title">Experience<br><span class="experience-heading-dim">Desk.</span></h2>
+        <p>Turning Opportunities into Experience.</p>
+      </div>
+
+      <div class="experience-layout">
+      <div class="desk-scene" aria-label="Illustration of an AI engineer's desk">
+        <div class="desk-laptop">
+          <div class="laptop-screen">
+            <div class="screen-top"><span class="screen-mark">AG</span><span>EXPERIENCE ARCHIVE</span><span class="screen-status" id="experience-screen-status" aria-live="polite"><i></i><span>01 / 03 ACTIVE</span></span></div>
+            <div class="screen-content">
+              <div class="screen-greeting"><span>ARJUN GOEL</span><small>2026</small></div>
+              <div class="experience-list" aria-label="Choose an internship to view its details">
+                <button type="button" class="experience-entry is-active" data-scroll-target="experience-codgen" aria-controls="experience-codgen" aria-current="true"><span class="entry-index">01</span><span class="entry-icon"><img src="assets/Experience%20Company%20logo/Screenshot%202026-10-25%20065529.png" alt=""></span><span class="entry-copy"><strong>CodGen</strong><small>GENAI &amp; LLM</small></span><span class="entry-arrow">↗</span></button>
+                <button type="button" class="experience-entry" data-scroll-target="experience-upstart" aria-controls="experience-upstart"><span class="entry-index">02</span><span class="entry-icon"><img src="assets/Experience%20Company%20logo/Screenshot%202026-10-25%20065659.png" alt=""></span><span class="entry-copy"><strong>UpStartInterns</strong><small>Artificial Intelligence & Generative AI</small></span><span class="entry-arrow">↗</span></button>
+                <button type="button" class="experience-entry" data-scroll-target="experience-veda" aria-controls="experience-veda"><span class="entry-index">03</span><span class="entry-icon"><img src="assets/Experience%20Company%20logo/Screenshot%202026-10-25%20065616.png" alt=""></span><span class="entry-copy"><strong>Veda Technology</strong><small>AI &amp; ML</small></span><span class="entry-arrow">↗</span></button>
+              </div>
+              <div class="screen-footer"><span>CAREER NOTES / 2026</span><span>SCROLL TO EXPLORE <b>↓</b></span></div>
+            </div>
+          </div>
+          <div class="laptop-base"><span></span></div>
+          <div class="laptop-shadow"></div>
+        </div>
+      </div>
+
+      <div class="experience-notes" aria-label="Virtual internship experience details">
+        <article class="experience-card" id="experience-codgen">
+          <div class="experience-card-head">
+            <div class="company-logo codgen-logo"><img src="assets/Experience%20Company%20logo/Screenshot%202026-10-25%20065529.png" alt="CodGen logo"></div>
+            <div class="experience-card-title"><span class="experience-card-kicker">FIELD NOTE 01 <i></i> GENAI / LLM</span><h3 class="display">GenAI &amp; LLM — Virtual Internship</h3><p>CodGen</p></div>
+            <span class="experience-card-number">01 / 03</span>
+          </div>
+          <div class="experience-card-meta"><span>15 October 2026 – 15 November 2026</span><span>4 weeks</span><span>Remote</span></div>
+          <div class="experience-card-body">
+            <div><h4>OVERVIEW</h4><p>Building Python applications powered by large language models, with a focus on API integration, prompt engineering, conversational memory, and semantic information retrieval. The experience emphasizes practical implementation, structured code, documentation, and version control. Embedding search and RAG are broader curriculum topics, rather than claims of a completed end-to-end system.</p></div>
+            <div><h4>FOCUS AREAS</h4><ul><li>Integrate hosted LLM APIs into Python applications and conversational interfaces.</li><li>Configure prompts; manage conversation context and session exports.</li><li>Handle input validation, API errors, and secure environment-based configuration.</li><li>Explore embedding-based retrieval and RAG fundamentals.</li></ul></div>
+          </div>
+          <div class="experience-card-tech"><h4>TECHNOLOGY / CONCEPTS</h4><div class="experience-tags"><span>Python</span><span>Groq API</span><span>LLM APIs</span><span>Prompt Engineering</span><span>Conversation Memory</span><span>Text Embeddings</span><span>Cosine Similarity</span><span>RAG Fundamentals</span><span>JSON</span><span>Git / GitHub</span></div></div>
+        </article>
+
+        <article class="experience-card" id="experience-upstart">
+          <div class="experience-card-head">
+            <div class="company-logo upstart-logo"><img src="assets/Experience%20Company%20logo/Screenshot%202026-10-25%20065659.png" alt="UpStartInterns logo"></div>
+            <div class="experience-card-title"><span class="experience-card-kicker">FIELD NOTE 02 <i></i> GENERATIVE AI</span><h3 class="display">Artificial Intelligence &amp; Generative AI — Virtual Internship</h3><p>UpStartInterns</p></div>
+            <span class="experience-card-number">02 / 03</span>
+          </div>
+          <div class="experience-card-meta"><span>October 2026</span><span>Remote</span></div>
+          <div class="experience-card-body">
+            <div><h4>OVERVIEW</h4><p>Working on practical LLM applications focused on reliable outputs, prompt design, and document-grounded question answering. The work includes schema-based JSON validation and a RAG pipeline that retrieves evidence from user-uploaded documents before generating responses.</p></div>
+            <div><h4>FOCUS AREAS</h4><ul><li>Refine prompts for factual consistency and safe handling of missing information.</li><li>Validate structured outputs with Pydantic schemas and repair malformed responses.</li><li>Process PDF, TXT, and Markdown files; retrieve passages with FAISS and Sentence Transformers.</li><li>Generate evidence-grounded answers with Gemini and document reproducible setup.</li></ul></div>
+          </div>
+          <div class="experience-card-tech"><h4>TECHNOLOGY / CONCEPTS</h4><div class="experience-tags"><span>Python</span><span>LangChain</span><span>Google Gemini API</span><span>Pydantic</span><span>Sentence Transformers</span><span>FAISS</span><span>RAG</span><span>Streamlit</span><span>uv</span><span>Git / GitHub</span></div></div>
+        </article>
+
+        <article class="experience-card" id="experience-veda">
+          <div class="experience-card-head">
+            <div class="company-logo veda-logo"><img src="assets/Experience%20Company%20logo/Screenshot%202026-10-25%20065616.png" alt="Veda Technology logo"></div>
+            <div class="experience-card-title"><span class="experience-card-kicker">FIELD NOTE 03 <i></i> AI / ML FOUNDATIONS</span><h3 class="display">AI &amp; ML — Virtual Internship</h3><p>Veda Technology</p></div>
+            <span class="experience-card-number">03 / 03</span>
+          </div>
+          <div class="experience-card-meta"><span>October 2026 – November 2026</span><span>45 Days</span><span>Remote</span></div>
+          <div class="experience-card-body">
+            <div><h4>OVERVIEW</h4><p>Strengthening practical skills in Python programming, data analysis, numerical computing, and artificial intelligence through structured technical assignments and hands-on exercises. This foundational experience emphasizes interpreting data, analytical problem-solving, and core AI / ML concepts.</p></div>
+            <div><h4>FOCUS AREAS</h4><ul><li>Develop structured Python solutions for programming and data-processing problems.</li><li>Manipulate and filter datasets; perform numerical calculations.</li><li>Apply statistical analysis and interpret datasets.</li><li>Build foundational AI and machine-learning knowledge through practical exercises.</li></ul></div>
+          </div>
+          <div class="experience-card-tech"><h4>TECHNOLOGY / CONCEPTS</h4><div class="experience-tags"><span>Python</span><span>Jupyter Notebook</span><span>NumPy</span><span>Pandas</span><span>Data Analysis</span><span>Statistical Analysis</span><span>AI / ML Fundamentals</span></div></div>
+        </article>
+      </div>
+      </div>
+    </div>
   </section>
 
   <!-- ===================== SERVICES ===================== -->
@@ -448,7 +557,7 @@
           </div>
 
           <div class="svc-logo">
-            <img src="assets\service logo\python.png" alt="Logo">
+            <img src="assets/service%20logo/python.png" alt="Logo">
           </div>
         </div>
 
@@ -456,12 +565,12 @@
           <div>
             <h3>GenAI & LLMs</h3>
             <p>
-              Retrieval-Augmented Generation (RAG) · AI Agents · Prompt Engineering · AI Evaluation · MCP · Claude AI · OpenAI
+              Retrieval-Augmented Generation (RAG) · AI Agents · Prompt Engineering · AI Evaluation · MCP
             </p>
           </div>
 
           <div class="svc-logo">
-            <img src="assets\service logo\ai-assistant.png" alt="Logo">
+            <img src="assets/service%20logo/ai-assistant.png" alt="Logo">
           </div>
         </div>
 
@@ -474,7 +583,7 @@
           </div>
 
           <div class="svc-logo">
-            <img src="assets\service logo\coding.png" alt="Logo">
+            <img src="assets/service%20logo/coding.png" alt="Logo">
           </div>
         </div>
 
@@ -482,12 +591,12 @@
           <div>
             <h3>Frameworks & APIs</h3>
             <p>
-              LangChain · FastAPI · REST APIs · Hugging Face Transformers · PyTorch · Pydantic · OpenAI Responses API
+              LangChain · FastAPI · LangGraph · REST APIs · Hugging Face Transformers · PyTorch · Pydantic · OpenAI Responses API
             </p>
           </div>
 
           <div class="svc-logo">
-            <img src="assets\service logo\api.png" alt="Logo">
+            <img src="assets/service%20logo/api.png" alt="Logo">
           </div>
         </div>
 
@@ -500,7 +609,7 @@
           </div>
 
           <div class="svc-logo">
-            <img src="assets\service logo\data.png" alt="Logo">
+            <img src="assets/service%20logo/data.png" alt="Logo">
           </div>
         </div>
 
@@ -508,12 +617,12 @@
           <div>
             <h3>Infrastructure & Tools</h3>
             <p>
-              Vector Databases · MySQL · Git · GitHub · Microsoft Azure · Microsoft AI Foundry · Streamlit
+              Vector Databases · MySQL · Git · GitHub · Microsoft Azure · Microsoft AI Foundry · Docker · Streamlit
             </p>
           </div>
 
           <div class="svc-logo">
-            <img src="assets\service logo\browser.png" alt="Logo">
+            <img src="assets/service%20logo/browser.png" alt="Logo">
           </div>
         </div>
 
@@ -969,6 +1078,7 @@
   <!-- ===================== JAVASCRIPT ===================== -->
 
   <script src="script.js"></script>
+  <script src="experience.js"></script>
 
 </body>
 </html>

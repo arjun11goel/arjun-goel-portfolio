@@ -90,15 +90,16 @@ const heroCardsWrap = document.getElementById('heroCards');
 
 const desktopQuery = window.matchMedia('(min-width:721px)');
 
-function enableHeroParallax() {
-
-  if (!desktopQuery.matches) {
-    heroCardsWrap.style.transform = 'translate3d(0,0,0)';
+function syncHeroParallax() {
+  if (desktopQuery.matches) {
+    heroSection.addEventListener('mousemove', handleHeroMouseMove);
+    heroSection.addEventListener('mouseleave', resetHeroParallax);
     return;
   }
 
-  heroSection.addEventListener('mousemove', handleHeroMouseMove);
-  heroSection.addEventListener('mouseleave', resetHeroParallax);
+  heroSection.removeEventListener('mousemove', handleHeroMouseMove);
+  heroSection.removeEventListener('mouseleave', resetHeroParallax);
+  resetHeroParallax();
 }
 
 function handleHeroMouseMove(event) {
@@ -119,7 +120,8 @@ function resetHeroParallax() {
     'translate3d(0,0,0)';
 }
 
-enableHeroParallax();
+syncHeroParallax();
+window.addEventListener('resize', syncHeroParallax, { passive: true });
 
 
 /* =========================================================
@@ -133,13 +135,18 @@ const mobileClose = document.getElementById('mobileClose');
 function openMobileMenu() {
 
   mobileMenu.classList.add('open');
+  mobileMenu.setAttribute('aria-hidden', 'false');
+  navToggle.setAttribute('aria-expanded', 'true');
   document.body.style.overflow = 'hidden';
+  mobileMenu.querySelector('a')?.focus({ preventScroll: true });
 
 }
 
 function closeMobileMenu() {
 
   mobileMenu.classList.remove('open');
+  mobileMenu.setAttribute('aria-hidden', 'true');
+  navToggle.setAttribute('aria-expanded', 'false');
   document.body.style.overflow = '';
 
 }
@@ -163,7 +170,7 @@ document.addEventListener('keydown', event => {
 
 window.addEventListener('resize', () => {
 
-  if (window.innerWidth > 720) {
+  if (window.innerWidth > 900) {
     closeMobileMenu();
   }
 
@@ -171,76 +178,41 @@ window.addEventListener('resize', () => {
 
 
 /* =========================================================
-   GENERIC SCROLL REVEAL
+   GENERIC SCROLL REVEAL + SERVICES REVEAL
    ========================================================= */
 
-const revealElements =
-  document.querySelectorAll('.reveal-up');
-
-const revealObserver =
-  new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-
-      if (entry.isIntersecting) {
-
-        entry.target.classList.add('in');
-
-        revealObserver.unobserve(entry.target);
-
-      }
-
-    });
-
-  }, {
-    threshold: .15
-  });
+const revealElements = document.querySelectorAll('.reveal-up');
+const serviceCards = document.querySelectorAll('.svc-card');
 
 revealElements.forEach((element, index) => {
-
-  element.style.transitionDelay =
-    ((index % 4) * .06) + 's';
-
-  revealObserver.observe(element);
-
+  element.style.transitionDelay = ((index % 4) * .06) + 's';
 });
-
-
-/* =========================================================
-   SERVICES REVEAL
-   ========================================================= */
-
-const serviceCards =
-  document.querySelectorAll('.svc-card');
-
-const serviceObserver =
-  new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-
-      if (entry.isIntersecting) {
-
-        entry.target.classList.add('in');
-
-        serviceObserver.unobserve(entry.target);
-
-      }
-
-    });
-
-  }, {
-    threshold: .25
-  });
-
 serviceCards.forEach((card, index) => {
-
-  card.style.transitionDelay =
-    (index * .08) + 's';
-
-  serviceObserver.observe(card);
-
+  card.style.transitionDelay = (index * .08) + 's';
 });
 
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('in');
+      revealObserver.unobserve(entry.target);
+    });
+  }, { threshold: .15 });
+  revealElements.forEach(element => revealObserver.observe(element));
+
+  const serviceObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('in');
+      serviceObserver.unobserve(entry.target);
+    });
+  }, { threshold: .25 });
+  serviceCards.forEach(card => serviceObserver.observe(card));
+} else {
+  revealElements.forEach(element => element.classList.add('in'));
+  serviceCards.forEach(card => card.classList.add('in'));
+}
 
 /* =========================================================
    BIO WORD-BY-WORD HIGHLIGHT
@@ -319,9 +291,6 @@ updateBioHighlight();
 /* =========================================================
    CERTIFICATE HORIZONTAL SCROLL JOURNEY
    ========================================================= */
-
-const certSection =
-  document.getElementById('certificates');
 
 const certScrollArea =
   document.getElementById('certScrollArea');
@@ -471,15 +440,6 @@ window.addEventListener(
   { passive: true }
 );
 
-window.addEventListener(
-  'resize',
-  () => {
-
-    calculateCertificateDimensions();
-
-  }
-);
-
 
 /*
   Initial calculation is delayed very slightly so that
@@ -502,37 +462,20 @@ window.addEventListener('load', () => {
    MOBILE CERTIFICATE REVEAL
    ========================================================= */
 
-const mobileCertificateObserver =
-  new IntersectionObserver((entries) => {
-
-    if (window.innerWidth > 720) {
-      return;
-    }
-
+if ('IntersectionObserver' in window) {
+  const mobileCertificateObserver = new IntersectionObserver(entries => {
+    if (window.innerWidth > 720) return;
     entries.forEach(entry => {
-
-      if (entry.isIntersecting) {
-
-        entry.target.classList.add('in');
-
-        mobileCertificateObserver.unobserve(
-          entry.target
-        );
-
-      }
-
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('in');
+      mobileCertificateObserver.unobserve(entry.target);
     });
+  }, { threshold: .18 });
 
-  }, {
-    threshold: .18
-  });
-
-certCards.forEach(card => {
-
-  mobileCertificateObserver.observe(card);
-
-});
-
+  certCards.forEach(card => mobileCertificateObserver.observe(card));
+} else {
+  certCards.forEach(card => card.classList.add('in'));
+}
 
 /* =========================================================
    RESPONSIVE CERTIFICATE RECALCULATION
@@ -553,17 +496,3 @@ window.addEventListener('resize', () => {
 });
 
 
-/* =========================================================
-   INITIAL CERTIFICATE STATE
-   ========================================================= */
-
-if (window.innerWidth > 900) {
-
-  certCards.forEach(card => {
-    card.classList.remove('in');
-  });
-
-  calculateCertificateDimensions();
-  updateCertificateJourney();
-
-}

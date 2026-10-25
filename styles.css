@@ -779,6 +779,33 @@ transform: translateX(70%) translateY(0);
   border-color: #3a3a3a;
   box-shadow: 0 30px 60px -30px rgba(0,0,0,.7);
 }
+/* Desktop sticky projects: consistent stepped offsets keep the reveal ordered. */
+@media (min-width: 1001px) {
+  #work .stack-wrap > .work-card {
+    top: 110px !important;
+    z-index: 1;
+  }
+
+  #work .stack-wrap > .work-card:nth-child(2) {
+    top: 126px !important;
+    z-index: 2;
+  }
+
+  #work .stack-wrap > .work-card:nth-child(3) {
+    top: 142px !important;
+    z-index: 3;
+  }
+
+  #work .stack-wrap > .work-card:nth-child(4) {
+    top: 158px !important;
+    z-index: 4;
+  }
+
+  #work .stack-wrap > .work-card:nth-child(5) {
+    top: 174px !important;
+    z-index: 5;
+  }
+}
 
 .work-meta {
   font-size: 13px;
@@ -831,7 +858,7 @@ transform: translateX(70%) translateY(0);
   gap: 8px;
   border: 1px solid var(--line);
   background: #fff;
-  transition: .2s var(--ease);
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease);
 }
 
 .work-links a.solid {
@@ -847,13 +874,16 @@ transform: translateX(70%) translateY(0);
 
 .work-links a:hover {
   transform: scale(1.05);
+  background: #fff;
+  box-shadow: 0 0 40px rgba(255, 255, 255, .35);
 }
 
 .work-visual img {
-width: 100%;
-height: 100%;
-object-fit:cover;
-display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter .35s ease;
 }
 
 .work-visual {
@@ -868,11 +898,16 @@ display: block;
   color: #3a3a3a;
   text-transform: uppercase;
   letter-spacing: .05em;
-  transition: transform .5s var(--ease);
+  transition: transform .35s var(--ease), box-shadow .35s ease;
 }
 
 .work-card:hover .work-visual {
   transform: scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .24);
+}
+
+.work-card:hover .work-visual img {
+  filter: brightness(1.08) saturate(1.06);
 }
 
 /* ===================== SERVICES ===================== */
@@ -1754,14 +1789,6 @@ transform: translateX(100%) translateY(0);
 
 @media (max-width: 1100px) {
 
-  .nav.pill {
-    gap: 24px;
-  }
-
-  .nav-links-left,
-  .nav-links-right {
-    gap: 18px;
-  }
 
   .hero-card {
     width: 145px;
@@ -2019,54 +2046,6 @@ transform: translateX(100%) translateY(0);
 
 @media (max-width: 720px) {
 
-  header {
-    top: 12px;
-    padding: 0 10px;
-  }
-
-  nav.pill {
-    width: 100%;
-    max-width: 100%;
-    padding: 9px 14px;
-    gap: 12px;
-    justify-content: center;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-  }
-
-  .nav-links-left,
-  .nav-links-right {
-    display: contents;
-    gap: 12px;
-    align-items: center;
-  }
-
-  nav.pill a {
-    font-size: 11px;
-  }
-
-  nav.pill .nav-logo a {
-    width: 32px;
-    height: 32px;
-    font-size: 17px;
-  }
-
-  /* Hide Resume */
-  .resume-btn {
-    display: none;
-  }
-
-  /* Hide hamburger */
-  .nav-toggle {
-    display: none;
-  }
-
-  /* Hide the separate mobile menu */
-  .mobile-menu {
-    display: none;
-  }
-  
   .work-card {
     position: sticky !important;
     z-index: 10 !important;
@@ -2286,57 +2265,6 @@ transform: translateX(100%) translateY(0);
 
   section {
     padding: 80px 6vw;
-  }
-
-  /* ===================== HEADER / NAV ===================== */
-
-  header {
-    position:fixed;
-    top: 12px;
-    padding: 10 10px;
-  }
-
-  nav.pill {
-    width: 100%;
-    max-width: 100%;
-    padding: 10px 15px;
-    gap: 25px;
-    justify-content: center;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-  }
-
-  .nav-links-left,
-  .nav-links-right {
-    display: contents;
-    gap: 14px;
-    align-items: center;
-  }
-
-  nav.pill a {
-    font-size: 11px;
-  }
-
-  nav.pill .nav-logo a {
-    width: 32px;
-    height: 32px;
-    font-size: 17px;
-  }
-
-  /* Hide Resume */
-  .resume-btn {
-    display: none;
-  }
-
-  /* Hide hamburger */
-  .nav-toggle {
-    display: none;
-  }
-
-  /* Hide the separate mobile menu */
-  .mobile-menu {
-    display: none;
   }
 
   /* ===================== HERO ===================== */
@@ -2691,23 +2619,6 @@ transform: translateX(100%) translateY(0);
     display: none;
   }
 
-  /* ===================== MOBILE MENU ===================== */
-
-  .mobile-menu {
-    gap: 30px;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-
-  .mobile-menu a {
-    font-size: clamp(28px, 8vw, 36px);
-  }
-
-  .mobile-close {
-    top: 24px;
-    right: 24px;
-    font-size: 24px;
-  }
 }
 
 
@@ -2717,57 +2628,6 @@ transform: translateX(100%) translateY(0);
    ========================================================= */
 
 @media (max-width: 420px) {
-
-  /*--------------nav ---------*/
-  
-  nav.pill {
-    padding: 8px 9px;
-    gap: 10px;
-  }
-
-  .nav-links-left,
-  .nav-links-right {
-    display: contents;
-    gap: 8px;
-  }
-
-  .nav-links-left a:nth-child(1) {
-    order: 1; /* About */
-  }
-
-  .nav-links-left a:nth-child(2) {
-    order: 2; /* Projects */
-  }
-
-  .nav-links-left a:nth-child(3) {
-    order: 3; /* Skills */
-  }
-
-  .nav-logo {
-    order: 4; /* AG */
-  }
-
-  .nav-links-left a:nth-child(4) {
-    order: 5; /* Education */
-  }
-
-  .nav-links-right a:nth-child(1) {
-    order: 6; /* Certificates */
-  }
-
-  .nav-links-right a:nth-child(2) {
-    order: 7; /* Contact */
-  }
-
-  nav.pill a {
-    font-size: 10px;
-  }
-
-  nav.pill .nav-logo a {
-    width: 29px;
-    height: 29px;
-    font-size: 15px;
-  }
 
   /* ---------- Hero ---------- */
 
@@ -2959,5 +2819,199 @@ transform: translateX(100%) translateY(0);
   .cert-card,
   .cert-gallery {
     animation: none !important;
+  }
+}
+
+/* Tighten the final section so the contact heading remains in view at page end. */
+#footer { padding:80px 6vw 50px; }
+#footer .footer-bottom { margin-top:50px; }
+@media (max-width:720px) {
+  #footer { padding:76px 6vw 40px; }
+  #footer .footer-bottom { margin-top:40px; }
+}
+
+
+/* ===================== RESPONSIVE NAVIGATION ===================== */
+@media (min-width:901px) {
+  nav.pill {
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:clamp(10px,1.35vw,16px);
+    width:max-content;
+    min-width:0;
+    max-width:calc(100vw - 32px);
+    height:64px;
+    padding:8px 18px;
+    box-sizing:border-box;
+  }
+  .nav-links-left,
+  .nav-links-right {
+    position:static;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:clamp(10px,1.35vw,16px);
+    margin:0;
+    transform:none;
+  }
+  nav.pill .nav-logo {
+    position:static;
+    top:auto;
+    left:auto;
+    transform:none;
+    flex:0 0 auto;
+  }
+  nav.pill .resume-btn {
+    position:static;
+    top:auto;
+    right:auto;
+    transform:none;
+    margin:0;
+    padding:8px 13px;
+    flex:0 0 auto;
+  }
+  nav.pill .resume-btn:hover { transform:scale(1.05); }
+}
+@media (min-width:1001px) and (max-width:1100px) {
+  nav.pill a { font-size:12px; }
+  nav.pill .resume-btn { padding:8px 13px; }
+}
+@media (min-width:901px) and (max-width:1000px) {
+  nav.pill { gap:10px; padding-inline:12px; }
+  .nav-links-left,
+  .nav-links-right { gap:10px; }
+  nav.pill a { font-size:11px; }
+  nav.pill .nav-logo a { width:32px; height:32px; font-size:16px; }
+  nav.pill .resume-btn { padding:7px 10px; }
+}
+@media (max-width:900px) {
+  header { top:12px; padding:0 12px; }
+  nav.pill {
+    position:relative;
+    width:min(100%,480px);
+    height:58px;
+    max-width:100%;
+    padding:7px 9px;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:0;
+    box-sizing:border-box;
+  }
+  .nav-links-left,
+  .nav-links-right { display:none; }
+  nav.pill .nav-logo {
+    position:absolute;
+    left:20px;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:2;
+  }
+  nav.pill .nav-logo a { width:34px; height:34px; font-size:18px; }
+  nav.pill .resume-btn { display:none; }
+  .nav-toggle {
+    display:flex;
+    width:44px;
+    height:44px;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
+    padding:10px;
+    border:0;
+    border-radius:50%;
+    background:transparent;
+    color:#fff;
+    cursor:pointer;
+  }
+  .nav-toggle:hover,
+  .nav-toggle:focus-visible { background:rgba(255,255,255,.1); outline:none; }
+  .nav-toggle:focus-visible { box-shadow:0 0 0 2px var(--accent); }
+  .mobile-menu {
+    display:none;
+    gap:clamp(18px,3.3vh,30px);
+    padding:72px 18px 30px;
+    overflow-y:auto;
+    overscroll-behavior:contain;
+  }
+  .mobile-menu.open { display:flex; }
+  .mobile-menu a {
+    font-size:clamp(25px,6vw,34px);
+    transition:color .2s ease,transform .2s ease;
+  }
+  .mobile-menu a:hover,
+  .mobile-menu a:focus-visible { color:var(--accent); transform:translateY(-2px); outline:none; }
+  .mobile-close { border:0; background:transparent; color:#fff; padding:8px; }
+}
+@media (max-width:720px) {
+  .mobile-close { top:24px; right:24px; font-size:24px; }
+}
+@media (max-width:380px) {
+  .mobile-menu { gap:18px; }
+  .mobile-menu a { font-size:25px; }
+}
+/* Responsive sticky project deck: offsets and layering are tuned per viewport. */
+@media (min-width: 901px) and (max-width: 1000px) {
+  #work .stack-wrap > .work-card { position: sticky !important; top: 100px !important; z-index: 1 !important; will-change: auto; gap: 24px; }
+  #work .stack-wrap > .work-card:nth-child(2) { top: 114px !important; z-index: 2 !important; }
+  #work .stack-wrap > .work-card:nth-child(3) { top: 128px !important; z-index: 3 !important; }
+  #work .stack-wrap > .work-card:nth-child(4) { top: 142px !important; z-index: 4 !important; }
+  #work .stack-wrap > .work-card:nth-child(5) { top: 156px !important; z-index: 5 !important; }
+}
+
+@media (min-width: 721px) and (max-width: 900px) {
+  #work .stack-wrap > .work-card { position: sticky !important; top: 80px !important; z-index: 1 !important; will-change: auto; gap: 22px; }
+  #work .stack-wrap > .work-card:nth-child(2) { top: 92px !important; z-index: 2 !important; }
+  #work .stack-wrap > .work-card:nth-child(3) { top: 104px !important; z-index: 3 !important; }
+  #work .stack-wrap > .work-card:nth-child(4) { top: 116px !important; z-index: 4 !important; }
+  #work .stack-wrap > .work-card:nth-child(5) { top: 128px !important; z-index: 5 !important; }
+}
+
+@media (max-width: 720px) {
+  #work .stack-wrap > .work-card { position: sticky !important; top: 76px !important; z-index: 1 !important; will-change: auto; gap: 18px; }
+  #work .stack-wrap > .work-card:nth-child(2) { top: 86px !important; z-index: 2 !important; }
+  #work .stack-wrap > .work-card:nth-child(3) { top: 96px !important; z-index: 3 !important; }
+  #work .stack-wrap > .work-card:nth-child(4) { top: 106px !important; z-index: 4 !important; }
+  #work .stack-wrap > .work-card:nth-child(5) { top: 116px !important; z-index: 5 !important; }
+}
+
+/* Compact short-height phones, including 320x568 and 375x667. */
+@media (max-width: 430px) and (max-height: 767px) {
+  #work .stack-wrap > .work-card { top: 72px !important; }
+  #work .stack-wrap > .work-card:nth-child(2) { top: 80px !important; }
+  #work .stack-wrap > .work-card:nth-child(3) { top: 88px !important; }
+  #work .stack-wrap > .work-card:nth-child(4) { top: 96px !important; }
+  #work .stack-wrap > .work-card:nth-child(5) { top: 104px !important; }
+}
+
+@media (max-width: 720px) and (max-height: 767px) {
+  #work .stack-wrap > .work-card { padding: 14px; gap: 10px; }
+  #work .work-meta { font-size: 10px; margin-bottom: 10px; gap: 6px; }
+  #work .work-title { font-size: clamp(24px, 7vw, 29px); line-height: .96; }
+  #work .work-desc { max-width: none; margin-top: 10px; font-size: 12px; line-height: 1.45; }
+  #work .work-links { gap: 8px; margin-top: 12px; }
+  #work .work-links a { padding: 8px 10px; font-size: 11px; }
+  #work .work-visual { height: clamp(96px, 18svh, 122px); }
+  #work .work-visual img { object-fit: contain; }
+}
+
+/* Keep tablet-height cards compact enough to remain readable in the sticky stack. */
+@media (min-width: 721px) and (max-width: 1000px) and (max-height: 850px) {
+  #work .stack-wrap > .work-card { padding: 22px; gap: 16px; }
+  #work .work-title { font-size: clamp(27px, 3.8vw, 38px); line-height: .96; }
+  #work .work-desc { max-width: none; font-size: 13px; line-height: 1.5; }
+  #work .work-links { margin-top: 18px; }
+  #work .work-visual { height: clamp(130px, 22svh, 180px); }
+  #work .work-visual img { object-fit: contain; }
+}
+
+/* On very short viewports, the full card cannot fit below the navigation. */
+@media (max-width: 720px) and (max-height: 500px),
+       (min-width: 721px) and (max-width: 1000px) and (max-height: 620px) {
+  #work .stack-wrap > .work-card {
+    position: static !important;
+    top: auto !important;
+    z-index: auto !important;
   }
 }
