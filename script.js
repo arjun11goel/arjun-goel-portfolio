@@ -182,6 +182,9 @@ window.addEventListener('resize', () => {
    ========================================================= */
 
 const revealElements = document.querySelectorAll('.reveal-up');
+const nonExperienceRevealElements = [...revealElements].filter(
+  element => !element.closest('#experience')
+);
 const serviceCards = document.querySelectorAll('.svc-card');
 
 revealElements.forEach((element, index) => {
@@ -199,7 +202,7 @@ if ('IntersectionObserver' in window) {
       revealObserver.unobserve(entry.target);
     });
   }, { threshold: .15 });
-  revealElements.forEach(element => revealObserver.observe(element));
+  nonExperienceRevealElements.forEach(element => revealObserver.observe(element));
 
   const serviceObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -210,16 +213,16 @@ if ('IntersectionObserver' in window) {
   }, { threshold: .25 });
   serviceCards.forEach(card => serviceObserver.observe(card));
 } else {
-  revealElements.forEach(element => element.classList.add('in'));
+  nonExperienceRevealElements.forEach(element => element.classList.add('in'));
   serviceCards.forEach(card => card.classList.add('in'));
 }
 
 /* =========================================================
    BIO WORD-BY-WORD HIGHLIGHT
    ========================================================= */
-
+   
 const bioSentence =
-  "I’m an MCA’27 student at VIT Vellore focused on AI Engineering. I’ve built 5+ AI projects spanning Generative AI, LLMs, RAG, agentic workflows, predictive ML, and multimodal computer vision. My focus is on developing practical, end-to-end systems involving retrieval, vector search, structured outputs, evaluation, and backend APIs — not just simple model or API integrations. My goal is to build production-oriented solutions that solve meaningful real-world problems.";
+  "I'm an MCA’27 student at VIT Vellore focused on AI Engineering, spanning Generative AI, applied Machine Learning, and backend development. Through 5+ projects, I've built RAG applications, intelligent agent workflows, and predictive ML pipelines. My work focuses on engineering beyond basic LLM API integrations — encompassing data and retrieval workflows, structured output validation, safety guardrails, evaluation, and backend engineering. I aim to build reliable, production-oriented solutions to practical problems.";
 const bioElement =
   document.getElementById('bioText');
 

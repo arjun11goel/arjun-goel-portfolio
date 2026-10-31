@@ -1,51 +1,71 @@
-/* ===================== EXPERIENCE NOTES ===================== */
+/* ===================== EXPERIENCE CARD REVEAL AND SCROLL FOCUS ===================== */
 (() => {
   const section = document.getElementById('experience');
-  const cards = [...document.querySelectorAll('.experience-card')];
-  const entries = [...document.querySelectorAll('.experience-entry')];
-  const status = document.querySelector('#experience-screen-status span');
-  if (!section) return;
+  const cards = [...document.querySelectorAll('#experience .experience-card')];
 
-  const reveal = () => section.classList.add('is-visible');
-  const totalEntries = String(entries.length).padStart(2, '0');
-  const setActive = index => {
-    if (index < 0 || index >= entries.length) return;
-    if (status) status.textContent = `${String(index + 1).padStart(2, '0')} / ${totalEntries} ACTIVE`;
-    entries.forEach((entry, entryIndex) => {
-      const active = entryIndex === index;
-      entry.classList.toggle('is-active', active);
-      if (active) entry.setAttribute('aria-current', 'true');
-      else entry.removeAttribute('aria-current');
+  if (!section || !cards.length) return;
+
+  const introElements = [...section.querySelectorAll('.experience-intro .reveal-up')];
+  const prefersReducedMotion =
+    window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const supportsIntersectionObserver = 'IntersectionObserver' in window;
+
+  if (prefersReducedMotion || !supportsIntersectionObserver) {
+    cards.forEach(card => card.classList.add('is-visible'));
+    introElements.forEach(element => element.classList.add('in'));
+  } else {
+    section.classList.add('experience-reveal-enabled');
+
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        if (entry.target.matches('.experience-card')) {
+          entry.target.classList.add('is-visible');
+        } else {
+          entry.target.classList.add('in');
+        }
+        revealObserver.unobserve(entry.target);
+      });
+    }, {
+      threshold: 0.01,
+      rootMargin: '0px 0px 10% 0px'
+    });
+
+    [...introElements, ...cards].forEach(element => revealObserver.observe(element));
+  }
+
+  let activeUpdateQueued = false;
+
+  const updateActiveCard = () => {
+    if (activeUpdateQueued) return;
+    activeUpdateQueued = true;
+
+    window.requestAnimationFrame(() => {
+      activeUpdateQueued = false;
+
+      const centerY = window.innerHeight / 2;
+      const focusRadius = Math.min(90, Math.max(48, window.innerHeight * 0.08));
+      const activeCard = cards
+        .map(card => ({ card, rect: card.getBoundingClientRect() }))
+        .filter(({ rect }) =>
+          rect.bottom >= centerY - focusRadius &&
+          rect.top <= centerY + focusRadius
+        )
+        .sort((a, b) => {
+          const aCenter = (a.rect.top + a.rect.bottom) / 2;
+          const bCenter = (b.rect.top + b.rect.bottom) / 2;
+          return Math.abs(aCenter - centerY) - Math.abs(bCenter - centerY);
+        })[0]?.card;
+
+      cards.forEach(card => {
+        card.classList.toggle('is-active', card === activeCard);
+      });
     });
   };
 
-  entries.forEach((entry, index) => {
-    entry.addEventListener('click', () => {
-      const card = document.getElementById(entry.dataset.scrollTarget);
-      if (!card) return;
-      setActive(index);
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      card.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
-    });
-  });
-
-  if ('IntersectionObserver' in window) {
-    const entranceObserver = new IntersectionObserver(observed => {
-      if (observed.some(item => item.isIntersecting)) {
-        reveal();
-        entranceObserver.disconnect();
-      }
-    }, { threshold: 0.08 });
-    entranceObserver.observe(section);
-
-    const activeObserver = new IntersectionObserver(observed => {
-      const current = observed.filter(item => item.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (current) setActive(cards.indexOf(current.target));
-    }, { rootMargin: '-34% 0px -34% 0px', threshold: [0.05, 0.25, 0.5] });
-    cards.forEach(card => activeObserver.observe(card));
-  } else {
-    reveal();
-    setActive(0);
-  }
+  window.addEventListener('scroll', updateActiveCard, { passive: true });
+  window.addEventListener('resize', updateActiveCard);
+  updateActiveCard();
 })();
